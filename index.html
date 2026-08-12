@@ -131,7 +131,23 @@ function renderAutoMission(){
     box.innerHTML=`<b style="font-size:14px">等待后台接通</b><p style="font-size:10px;color:#a8bdd0;line-height:1.6">发布 Google Sheet 到网络后，这里会自动显示你每天 8:08 新学的内容。</p>`;
     return;
   }
-  const r=AUTO_ROWS[AUTO_ROWS.length-1];
+  const now=new Date();
+const today=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+
+const todayRows=AUTO_ROWS.filter(row=>{
+  const d=String(row[0]||'');
+  return d.includes(today);
+});
+
+if(!todayRows.length){
+  box.innerHTML=`<b style="font-size:14px">🌙 今日课程尚未生成</b>
+  <p style="font-size:10px;color:#a8bdd0;line-height:1.6">
+  今天 ${today} 的新副本还没有进入学习后台。每天 8:08 生成后会自动出现在这里。
+  </p>`;
+  return;
+}
+
+const r=todayRows[todayRows.length-1];
   const date=r[0]||'', module=r[1]||'商业金融', branch=r[2]||'', title=r[3]||'今日学习', core=r[4]||'', world=r[8]||'真实商业世界', mode=r[9]||'经营', figure=r[10]||'', era=r[11]||'', xpadd=Number(r[12]||20), grow=Number(r[13]||1);
   box.innerHTML=`<div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
     <div><div style="font-size:9px;color:#ffd45d">${date} · ${module} · ${branch}</div>

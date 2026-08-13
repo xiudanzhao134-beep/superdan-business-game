@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>超级丹 · 商业金融世界修炼 V2</title>
+<style>
+:root{--bg:#071526;--card:#10243b;--card2:#132c48;--line:#31506d;--text:#eef7ff;--muted:#9fb4c8;--gold:#f2d18a;--cyan:#75d7e8}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(circle at 50% -10%,#173b61,#071526 48%);color:var(--text)}
+.wrap{max-width:980px;margin:auto;padding:18px 14px 60px}.hero{padding:24px 18px;text-align:center}.hero h1{margin:4px 0 8px;font-size:28px}.hero p{margin:0;color:var(--muted);line-height:1.7}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}.stat,.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(19,44,72,.94),rgba(10,28,47,.94));border-radius:16px}.stat{padding:12px;text-align:center}.stat b{display:block;font-size:20px;color:var(--gold)}.stat small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{padding:16px}.card h2{font-size:18px;margin:0 0 8px}.card p,.card li{font-size:14px;color:#d7e5f1;line-height:1.75}.tag{display:inline-block;border:1px solid #496b89;border-radius:999px;padding:4px 8px;margin:3px;font-size:11px;color:#bcd3e5}
+.full{grid-column:1/-1}.today{border-color:#7f7047;box-shadow:0 0 24px rgba(242,209,138,.08)}.section-title{font-size:21px;margin:24px 2px 10px}
+.tree{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.root{padding:13px;border:1px solid var(--line);border-radius:14px;background:#0c2036}.root b{color:var(--cyan)}button{border:0;border-radius:12px;background:#e6c276;color:#152235;font-weight:700;padding:11px 14px;cursor:pointer}.challenge{border-left:3px solid var(--gold);padding-left:12px}
+textarea{width:100%;min-height:120px;border-radius:12px;border:1px solid var(--line);background:#081a2d;color:white;padding:12px;font-size:14px}.hidden{display:none}
+.timeline{border-left:2px solid #355b79;margin-left:8px;padding-left:16px}.timeline div{margin:12px 0}.warning{font-size:12px;color:#c7a9a9}
+@media(max-width:650px){.stats,.tree{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.full{grid-column:auto}.hero h1{font-size:23px}}
+</style>
+</head>
+<body><div class="wrap">
+<section class="hero">
+<div>🌌 SUPER DAN WORLD · V2</div>
+<h1>超级丹 · 商业金融世界修炼</h1>
+<p>深度学习是主体，游戏只是外壳。目标不是“答对”，而是形成自己的商业判断、金融因果链与高手思维。</p>
+</section>
+
+<section class="stats">
+<div class="stat"><b id="level">Lv.3</b><small>当前等级</small></div>
+<div class="stat"><b id="xp">350</b><small>真实 XP</small></div>
+<div class="stat"><b id="seeds">14</b><small>知识种子</small></div>
+<div class="stat"><b id="streak">—</b><small>连续修炼</small></div>
+</section>
+
+<h2 class="section-title">🗺️ 世界地图</h2>
+<section class="grid">
+<div class="card"><h2>🏙 商业世界</h2><p>需求 → 价值 → 获客 → 转化 → 收入 → 成本 → 利润 → 现金流 → 商业模式 → 竞争战略。</p><span class="tag">真实经营</span><span class="tag">二阶思考</span></div>
+<div class="card"><h2>🏦 金融学院</h2><p>独立主线，不再附属于商业题。钱与资产 → 财报 → 银行信用 → 利率央行 → 债券 → 股票估值 → 汇率 → 周期。</p><span class="tag">因果链</span><span class="tag">反例</span><span class="tag">现实应用</span></div>
+<div class="card"><h2>⚔️ 帝王竞技场</h2><p>高手不是皮肤。鬼谷子练利益结构，诸葛亮练资源配置，孙武练胜负条件，曹操练用人权衡，范蠡练周期进退。</p><span class="tag">开放式推演</span><span class="tag">无唯一答案</span></div>
+<div class="card"><h2>🏯 历史时空</h2><p>先隐藏历史结果，只给当时的信息、资源、利益集团与时间压力。你先决策，再看历史，再迁移到现代商业。</p><span class="tag">历史决策</span><span class="tag">现代迁移</span></div>
+</section>
+
+<h2 class="section-title">🔥 今日深度副本</h2>
+<section class="card today" id="todayBox"><p>正在读取今日学习后台……</p></section>
+
+<h2 class="section-title">💰 金融知识树</h2>
+<section class="card">
+<p><b>金融不再缺席。</b> 每个节点必须回答五件事：是什么 → 为什么存在 → 和前后知识怎么连接 → 现实怎么用 → 什么情况下常见结论会失效。</p>
+<div class="timeline">
+<div>① 钱与价值交换</div><div>② 资产、负债与净资产</div><div>③ 三张财务报表</div><div>④ 现金流与流动性</div><div>⑤ 银行、信用与货币创造</div><div>⑥ 利率、央行与通胀</div><div>⑦ 债券与收益率</div><div>⑧ 股票、估值与折现</div><div>⑨ 汇率与国际资本</div><div>⑩ 房地产、资本市场与经济周期</div>
+</div>
+</section>
+
+<h2 class="section-title">⚔️ 帝王竞技场 · 高手思维协议</h2>
+<section class="card">
+<p>每次挑战先禁止找“正确答案”。你必须先写自己的判断：</p>
+<div class="challenge"><p><b>六问：</b>①关键变量是什么？②真正约束是什么？③最大杠杆在哪里？④对手/市场会如何反制？⑤最坏情况是什么？⑥出现什么新信息，你会推翻自己现在的判断？</p></div>
+<textarea id="arenaAnswer" placeholder="这里不是考试答题区。写你的推演、犹豫、假设都可以……"></textarea>
+<p><button onclick="unlock()">完成自己的推演后，解锁高手拆解</button></p>
+<div id="master" class="hidden"><p><b>高手拆解原则：</b>不告诉你“标准答案”，而是检查你的变量有没有漏、因果有没有断、资源有没有错配、是否考虑反制，以及你有没有为判断设置可证伪条件。</p></div>
+</section>
+
+<h2 class="section-title">🌳 超级丹知识树</h2>
+<section class="tree">
+<div class="root"><b>商业因果</b><p>从“看现象”长到“找利润与现金的发动机”。</p></div>
+<div class="root"><b>金融系统</b><p>把钱、银行、利率、资产价格串成系统。</p></div>
+<div class="root"><b>战略博弈</b><p>训练资源、对手、约束、反制与退出。</p></div>
+<div class="root"><b>历史迁移</b><p>从历史局势提炼可迁移的现代决策模型。</p></div>
+</section>
+
+<h2 class="section-title">📚 往期知识库</h2>
+<section class="card"><div id="historyBox">读取中……</div></section>
+<p class="warning">V2 规则：课程生成时只记“待学”；完成真实推演后才应该记“已学”和通关奖励。XP 不奖励点中送分答案。</p>
+</div>
+<script>
+// 保留你当前 Google Sheet 的公开读取地址：若旧版已有 CSV_URL，只需把下面地址替换为旧版那一条即可。
+const CSV_URL='https://docs.google.com/spreadsheets/d/1p-De7YOe1strkrSv2IYF6Z_Cc1NDQ48zzX8TV1C87EY/gviz/tq?tqx=out:csv&sheet=%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95';
+
+function parseCSV(text){
+ const rows=[];let row=[],cell='',q=false;
+ for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];
+  if(c=='"'&&q&&n=='"'){cell+='"';i++}
+  else if(c=='"')q=!q;
+  else if(c==','&&!q){row.push(cell);cell=''}
+  else if((c=='\n'||c=='\r')&&!q){if(c=='\r'&&n=='\n')i++;row.push(cell);if(row.some(x=>x!==''))rows.push(row);row=[];cell=''}
+  else cell+=c;
+ } row.push(cell);if(row.some(x=>x!==''))rows.push(row);return rows;
+}
+function localDate(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function esc(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+async function load(){
+ try{
+  const t=await fetch(CSV_URL+'&_='+Date.now()).then(r=>r.text()), rows=parseCSV(t);
+  const data=rows.slice(1), today=localDate(), trs=data.filter(r=>String(r[0]).includes(today));
+  const box=document.getElementById('todayBox');
+  if(!trs.length){box.innerHTML=`<h2>🌙 ${today} 今日课程尚未生成</h2><p>后台写入当天课程后，这里会自动刷新。商业与金融必须同时存在。</p>`}
+  else{
+   const commercial=trs.filter(r=>String(r[1]).includes('商业'));
+   const finance=trs.filter(r=>String(r[1]).includes('金融'));
+   let h=`<h2>📅 ${today}</h2>`;
+   h+=commercial.length?`<h3>🏙 今日商业训练</h3>${commercial.map(renderRow).join('')}`:`<p>🏙 商业训练：等待后台生成</p>`;
+   h+=finance.length?`<h3>🏦 今日金融知识</h3>${finance.map(renderRow).join('')}`:`<p><b>⚠️ 今日金融板块尚未生成。</b> V2 不允许用商业案例冒充金融学习。</p>`;
+   box.innerHTML=h;
+  }
+  const hist=data.slice(-12).reverse();
+  document.getElementById('historyBox').innerHTML=hist.map(r=>`<p><b>${esc(r[0])} · ${esc(r[3])}</b><br><span style="color:#9fb4c8">${esc(r[1])} / ${esc(r[2])}</span></p>`).join('');
+ }catch(e){document.getElementById('todayBox').innerHTML='<p>后台读取失败，请检查公开表格地址。</p>'}
+}
+function renderRow(r){return `<div style="margin:12px 0;padding:12px;border:1px solid #31506d;border-radius:12px"><b>${esc(r[3])}</b><p>${esc(r[4])}</p><p>${esc(r[6])}</p><span class="tag">${esc(r[8])}</span><span class="tag">${esc(r[9])}</span><span class="tag">${esc(r[10])}</span></div>`}
+function unlock(){if(!document.getElementById('arenaAnswer').value.trim()){alert('先留下你自己的判断。高手拆解不能代替你的思考。');return}document.getElementById('master').classList.remove('hidden')}
+load();
+</script>
+</body></html>
